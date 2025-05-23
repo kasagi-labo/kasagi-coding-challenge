@@ -25,58 +25,76 @@ These challenges focus on server-side logic, data management, and real-time comm
 
 ---
 
-## Mobile App Development Challenge 📱
+## Frontend Development Challenge
 
-### Objective: 
-Develop a mobile application using React Native that can be used as a companion app to the KasagiEngine game engine. This challenge requires you to design and implement the core architecture for a companion app framework that supports offline functionality and real-time data synchronization when online.
+This can be done in either web, app, or hybrid.
 
-### Challenge: Cross-Platform Companion App Framework with Offline Support & Real-time Sync
+### Goal
 
-* **Objective:** Design and prototype the core architecture for a **cross-platform mobile companion app** framework. This framework should enable rapid development of companion apps for games or applications built with a hypothetical "KasagiEngine." The key features are robust offline capabilities, seamless data synchronization when online, and an extensible module system.
-* **Context (Hypothetical KasagiEngine):** Imagine KasagiEngine is used to create various games or interactive experiences. Developers using the engine want to easily create mobile companion apps for their users (e.g., to manage inventory, view player stats, receive notifications, interact with a simplified game state, or control certain aspects of the main application).
-* **Key Skills to Test:**
-    * **Mobile Architecture:** Design a clean, scalable, and maintainable architecture for a cross-platform application (e.g., using React Native, Flutter, Kotlin Multiplatform, or native development with clear separation of concerns if justifying platform-specific expertise). Discuss patterns like MVVM, MVI, Clean Architecture, etc., in the mobile context.
-    * **Cross-Platform Strategy:** Justify the choice of cross-platform technology or the approach for managing separate native codebases if that's the preferred route. Discuss how to maximize code reuse while allowing for platform-specific UI/UX and capabilities.
-    * **Offline-First Design:** Implement a robust local data storage solution (e.g., SQLite, Realm, a NoSQL mobile DB). The app should be fully functional offline for core features. Design a clear strategy for data caching, versioning, and conflict resolution when data is synced.
-    * **Data Synchronization:** Design and partially implement a mechanism for two-way data synchronization with a backend service (this could theoretically connect to the Node.js services from previous challenges). Handle scenarios like intermittent connectivity, background sync, and push notifications for updates.
-    * **Modular Design & Extensibility:** Architect the app so that new features or "modules" specific to different KasagiEngine games/apps can be easily added and managed. This might involve a plugin-like system or a well-defined modular structure.
-    * **Performance & Resource Management:** Address mobile-specific performance concerns: smooth UI, efficient background processing, battery life optimization, and memory management.
-    * **Security:** Outline security considerations for local data storage, API communication, and user authentication/authorization.
-    * **Native Capabilities:** Demonstrate how the framework would access native device features (e.g., camera, GPS, notifications) in a cross-platform consistent manner.
-* **Deliverables:**
-    * A **design document** detailing the architecture, choice of technologies, data models, synchronization strategy, and module system.
-    * A **core prototype** demonstrating:
-        * Basic cross-platform UI structure.
-        * Local data storage and retrieval for a sample data set (e.g., user profile, game items).
-        * A simulated offline/online mode, showcasing how the app behaves.
-        * A placeholder or basic implementation of the sync mechanism (even if mocked on the backend).
-        * An example of one or two simple "modules" that could be part of the companion app.
-    * A **presentation or detailed explanation** of the design choices, trade-offs, and future scalability of the framework.
-    * A plan for **testing** (unit, integration, UI, performance) the mobile application.
+Build a simplified “Anime Explorer” app that lists anime, lets users view details, mark favorites, and filter by genre. This will evaluate your skills in:
 
----
+* Frontend architecture
+* Navigation
+* API consumption
+* State management
+* Component design
+* Basic animations or interactions
 
-## Web Development Challenges 🎨
+### Requirements
 
-These challenges focus on creating complex, performant, and maintainable user interfaces, potentially for game UIs, sophisticated editor tools, or dashboards.
+1. Anime List Screen
 
-### Challenge: Dynamic & Modular Scoreboard UI
+    * Fetch data from the [Jikan API](https://docs.api.jikan.moe/#tag/anime) (e.g., https://api.jikan.moe/v4/anime).
+    * Show a list of anime with image, title, and score.
+    * Implement pagination (infinite scroll or “Load More”).
 
-* **Objective:** Design and implement the core architecture for a highly configurable and extensible scoreboard UI in a web application. The scoreboard should be able to display various types of scores (e.g., points, time, health) in a flexible manner, for multiple game modes or platforms. Users should be able to add, remove, and rearrange different modules/widgets dynamically.
-* **Context (Hypothetical KasagiEngine):** Imagine KasagiEngine has an editor for game development or a dashboard for managing application settings/analytics. This UI needs to be flexible.
-* **Key Skills to Test:**
-    * **Component Architecture:** Design a robust component system. How are widgets/modules defined, loaded, and sandboxed?
-    * **State Management:** Choose and implement a scalable state management solution that can handle complex interactions between different UI parts and potentially backend data.
-    * **Performance:** Ensure the UI remains responsive even with many dynamic components. Discuss strategies like virtualization, lazy loading, and efficient rendering.
-    * **Extensibility:** How can third-party developers create and integrate their own modules/widgets into this UI? Define an API or plugin system.
-    * **Layout & Responsiveness:** How would the system handle different screen sizes and complex layout configurations saved by users?
-    * **UI Framework/Library Proficiency:** Demonstrate mastery in a modern UI framework (e.g., React, Vue, Angular, or even a custom solution if justified).
-* **Deliverables:**
-    * A document outlining the UI architecture, component model, and state management strategy.
-    * A working prototype demonstrating dynamic loading/unloading of a few sample widgets, and basic layout customization (e.g., drag-and-drop rearrangement).
-    * Explanation of how data flows within the application and how components communicate.
-    * A discussion on performance considerations and testing strategies.
+2. Anime Detail Screen
 
----
+    * When a user taps an anime, navigate to a detail screen.
+    * Show synopsis, genres, score, and other relevant info.
 
-For a software engineer in Kasagi Labo, the emphasis should be less on just completing the task and more on the **design choices, justifications, foresight into potential issues (scalability, maintainability, performance), and the clarity of their proposed architecture and solutions.** You should be able to discuss trade-offs and articulate a vision for how their solution would evolve.
+3. Favorites Feature
+
+    * Allow users to “favorite” an anime.
+    * Store favorites locally (using AsyncStorage or MMKV).
+    * Favorites persist on app reload.
+    * Optional: Provide a Favorites tab to view saved items.
+
+4. Filter by Genre
+
+    * Add a dropdown/filter component to filter anime by genre.
+    * Use the Jikan API genre filtering if possible, or do client-side filtering.
+
+5. Basic Styling and UX
+
+    * Responsive design for different screen sizes.
+    * Use placeholder/loading UI states.
+    * Handle API errors gracefully.
+
+### Bonus Points (Optional)
+
+    * Use TypeScript / React Native / React JS.
+    * Add animations (e.g., favoriting with a heart animation).
+    * Use a state manager (Zustand, Redux Toolkit, or React Context).
+    * Write basic unit tests (Jest) or integration tests (React Native Testing Library).
+    * Implement deep linking or share functionality.
+    * Code-splitting and performance optimization.
+
+### Tools You Can Use
+
+    * React Navigation
+    * Axios or Fetch
+    * React Native Reanimated or LayoutAnimation (for animations)
+    * Any component library or styling approach (Tailwind, Styled Components, etc.)
+
+### Submission Guidelines
+
+    * Upload your code to GitHub/GitLab.
+    * Include a README.md with:
+    * Instructions to run the app
+    * Any known limitations or trade-offs
+    * Your thought process and architecture decisions
+
+### Time Estimate
+
+4–6 hours. You don’t have to complete every feature. Focus on **quality over quantity**.
