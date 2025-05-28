@@ -1,10 +1,12 @@
 # Kasagi Labo Coding Challenges
+![Cover Image](cat_coding.png)
 
-Below is the software engineer programming challenges for Web, Mobile and/or Backend development. These challenges are designed to test your problem-solving skills, coding proficiency, and architectural acumen. We aim to provide a comprehensive set of challenges that cover various aspects of software engineering, from basic coding tasks to more advanced topics.  These challenges are designed to test architectural thinking, scalability, performance optimization, and the ability to design robust and maintainable systems.
+Welcome to the [Kasagi Labo](https://www.kasagilabo.com/) coding challenges! These challenges cover a wide range of topics and will test your programming skills.These programming challenges cover for Web, Mobile and/or Backend development. These challenges are designed to test your problem-solving skills, coding proficiency, and architectural acumen. We aim to provide a comprehensive set of challenges that cover various aspects of software engineering, from basic coding tasks to more advanced topics.  These challenges are designed to test architectural thinking, scalability, performance optimization, and the ability to design robust and maintainable systems.
 
 ## 🚀 Backend Challenges 
 
 These challenges focus on server-side logic, data management, and real-time communication, which are often crucial for game backends or complex application infrastructures. Prefer programing languages like Node.js, Python, Java, C#, or Go.
+
 
 ### Objective 
 **Challenge: Scalable Real-time State Synchronization Service**
