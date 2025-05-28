@@ -1,5 +1,5 @@
 # Kasagi Labo Coding Challenges
-![Cover Image](cat_coding.png)
+![Cover Image](https://storage.googleapis.com/anime-images-001/cat_coding.png)
 
 Welcome to the [Kasagi Labo](https://www.kasagilabo.com/) coding challenges! These challenges cover a wide range of topics and will test your programming skills.These programming challenges cover for Web, Mobile and/or Backend development. These challenges are designed to test your problem-solving skills, coding proficiency, and architectural acumen. We aim to provide a comprehensive set of challenges that cover various aspects of software engineering, from basic coding tasks to more advanced topics.  These challenges are designed to test architectural thinking, scalability, performance optimization, and the ability to design robust and maintainable systems.
 
