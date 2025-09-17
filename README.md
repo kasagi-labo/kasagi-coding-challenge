@@ -105,7 +105,7 @@ Build a simplified “Anime Explorer” app that lists anime, lets users view de
 * React Native Reanimated or LayoutAnimation (for animations)
 * Any component library or styling approach (Tailwind, Styled Components, etc.)
 
-## Data Engineer
+## 🗄️⚙️ Data Engineer
 
 ### Objective
 This assessment evaluates your logical reasoning and ability to handle unstructured problems by completing three data engineering challenges, with an optional bonus.
