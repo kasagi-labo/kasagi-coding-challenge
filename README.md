@@ -105,6 +105,31 @@ Build a simplified “Anime Explorer” app that lists anime, lets users view de
 * React Native Reanimated or LayoutAnimation (for animations)
 * Any component library or styling approach (Tailwind, Styled Components, etc.)
 
+## Data Engineer
+
+### Objective
+This assessment evaluates your logical reasoning and ability to handle unstructured problems by completing three data engineering challenges, with an optional bonus.
+
+### Challenge 1: Data Generation
+Build a program that creates a 10MB text file. This file must contain a continuous stream of random objects, with each object separated by a comma. The stream should be a random mix of four data types:
+- Alphabetical strings: Containing only letters.
+- Integers: Whole numbers.
+- Real numbers: Numbers with a decimal point.
+- Alphanumeric strings: A combination of letters and numbers. These must also have a random number of leading and trailing spaces, totaling no more than 10 spaces.
+The final output should be a single, comma-separated file.
+
+### Challenge 2: Data Processing
+Develop a program that ingests the file created in Challenge 1. The program should then parse each individual object, identify its data type, and print the object along with its type to the console. For the alphanumeric strings, you must first remove any leading or trailing spaces.
+
+### Challenge 3: Anime Data Pipeline
+Construct a program that executes a full data pipeline from extraction to loading:
+- Extract: Scrape data from an anime-focused wiki or similar site. The program should be able to collect at least three key data points for a list of anime titles, such as the release date, number of episodes, and main studio.
+- Transform: Clean and refine the scraped data. This involves handling missing values, standardizing studio names, and creating a new calculated column—like years since release—based on the scraped date.
+- Load: Store the cleaned and transformed data into a structured format of your choice, such as a CSV file or a SQLite database.
+
+### Bonus Challenge
+You can optionally demonstrate your architectural skills by designing a reusable code base from Challenge 1 and 2 that can also be applied to solve aspects of Challenge 3.
+
 ## Submission Guidelines
 * Upload your code to GitHub/GitLab.
 * Include a README.md with:
